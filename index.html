@@ -16,12 +16,16 @@
             padding: 15px;
             height: 100vh;
         }
+        nav img {
+            width: 100%;
+            border-radius: 50%;
+        }
         nav ul {
             list-style-type: none;
             padding: 0;
         }
         nav ul li {
-            margin-bottom: 10px;
+            margin-bottom: 10%;
         }
         nav ul li a {
             text-decoration: none;
@@ -33,13 +37,23 @@
             color: #007BFF;
         }
         main {
-            padding: 20px;
+            padding: 40px;
             flex-grow: 1;
+        }
+
+        .research-interests li {
+            margin-bottom: 10px;
+        }
+
+        .recent-works li {
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
     <nav>
+        <img src="profile.jpeg" alt="dd">
+        <p>Ph.D. student in Seoul National University</p>
         <ul>
             <li><a href="#" onclick="loadContent('Home')">Home</a></li>
             <li><a href="#" onclick="loadContent('Research Interests')">Research Interests</a></li>
@@ -50,37 +64,49 @@
     
     <main id="main-content">
         <h1>Welcome to the Homepage of Sang Hyeok Im (임상혁)</h1>
-        <p>Hi! I am Sang Hyeok Im, a graduate student studying astronomy in Seoul National University.</p>
+        <p>Hi! I am Sang Hyeok Im, a Ph.D. student in the Department of Physics and Astronomy at Seoul National University (SNU). I am studying Extragalactic Astronomy and Cosmology during my Ph.D. program.</p>
+        <p>Currently, I am a member of the SNU Extragalactic Astronomy & Cosmology Team (<a href="https://exgalcos.github.io/" target="_blank">ExgalCos</a>; led by Prof. Ho Seong Hwang).</p>
     </main>
 
     <script>
+        const homeContent = document.getElementById('main-content').innerHTML;
         function loadContent(section) {
             var content = document.getElementById('main-content');
             
-            if (section === 'Home') {
-                content.innerHTML = `
-                    <h1>Welcome to the Homepage of Sang Hyeok Im (임상혁)</h1>
-                    <p>Hi! I am Sang Hyeok Im, a graduate student studying astronomy in Seoul National University.</p>
-                `;
+            if (section === 'Home'){
+                content.innerHTML = homeContent;
+
             } else if (section === 'Research Interests') {
                 content.innerHTML = `
                     <h1>Research Interests</h1>
-                    <p>Large-scale structures of the Universe</p>
+                    <p>In general, I am interested in studying cosmology using observations of external galaxies and large-scale structures in the Universe. In this context, I am also interested in cosmological numerical simulations, which are a very important tool for understanding and interpreting observations.</p>
+                    <p>Specifically, my research interests include:</p>
+                    <ul class="research-interests">
+                        <li>Large-scale structures in the Universe</li>
+                        <li>The origin and evolution of the environmental effects on galaxy properties.</li>
+                        <li>Formation and evolution of proto-clusters (and the galaxxies within them).</li>
+                    </ul>
                 `;
             } else if (section === 'Recent Works') {
                 content.innerHTML = `
                     <h1>Recent Works</h1>
+
+                    <p>Curriculum Vita (<a href="ImSang_CV.pdf" download>pdf</a>)</p>
+                    <p>ORCID : <a href="https://orcid.org/0009-0003-9748-4194" target="_blank">0009-0003-9748-4194</a></p>
+
                     <ul>
                         <h2>Reffereed Journal Article</h2>
                         <h3 class="">First Author</h3>
-                        <ul>
-                            <li>Testing Lyα Emitters and Lyman-break Galaxies as Tracers of Large-scale Structures at High Redshifts <br> 2024, ApJ, 972, 196 (<a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...972..196I/abstract" target="_blank">link</a>)
-</li>
+                        <ul class="recent-works">
+                            <li>Testing Lyα Emitters and Lyman-break Galaxies as Tracers of Large-scale Structures at High Redshifts <br> <b>Sang Hyeok Im</b> et al., 2024, ApJ, 972, 196 (<a href="https://ui.adsabs.harvard.edu/abs/2024ApJ...972..196I/abstract" target="_blank">link</a>)</li>
                         </ul>
 
                         <h3 class="">Co-Author</h3>
-                        <ul>
-                            <li>Will be updated ...</li>
+                        <ul class="research-interests">
+                            <li>ODIN: Identifying Protoclusters and Cosmic Filaments Traced by Lyα-emitting Galaxies <br> Vandana Ramakrishnan et al., 2024, submitted to ApJ (arXiv:2406.08645)</li>
+                            <li>The One-hundred-deg2 DECam Imaging in Narrowbands (ODIN): Survey Design and Science Goals <br> Kyoung-Soo Lee et al., 2024, ApJ, 962, 36 </li>
+                            <li>ODIN: Improved Narrowband LyαEmitter Selection Techniques for z = 2.4, 3.1, and 4.5 <br> Nicole M. Firestone et al., 2023, submitted to ApJ (arXiv:2312.16075)</li>
+                            <li>ODIN: Where Do Lyα Blobs Live? Contextualizing Blob Environments within the Large-Scale Structure <br> Vandana Ramakrishnan et al., 2023, ApJ, 951, 119</li>
                         </ul>
                         
                     </ul>
@@ -89,7 +115,10 @@
             } else if (section === 'Contact') {
                 content.innerHTML = `
                     <h1>Contact</h1>
-                    <p>Feel free email me!</p>
+                    <p>Please feel free to contact me with any questions, comments, or suggestions!</p>
+                    <ul>
+                            <li>Email: tkdgur0117@gmail.com</li>
+                    </ul>
                 `;
             }
         }
