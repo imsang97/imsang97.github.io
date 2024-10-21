@@ -41,9 +41,9 @@
 <body>
     <nav>
         <ul>
-            <li><a href="#" onclick="loadContent('home')">Home</a></li>
-            <li><a href="#" onclick="loadContent('Research Interests')">About</a></li>
-            <li><a href="#" onclick="loadContent('Recent Works')">Services</a></li>
+            <li><a href="#" onclick="loadContent('Home')">Home</a></li>
+            <li><a href="#" onclick="loadContent('Research Interests')">Research Interests</a></li>
+            <li><a href="#" onclick="loadContent('Recent Works')">Recent Works</a></li>
             <li><a href="#" onclick="loadContent('Contact')">Contact</a></li>
         </ul>
     </nav>
@@ -57,7 +57,7 @@
         function loadContent(section) {
             var content = document.getElementById('main-content');
             
-            if (section === 'home') {
+            if (section === 'Home') {
                 content.innerHTML = `
                     <h1>Welcome to the Homepage of Sang Hyeok Im (임상혁)</h1>
                     <p>Hi! I am Sang Hyeok Im, a graduate student studying astronomy in Seoul National University.</p>
