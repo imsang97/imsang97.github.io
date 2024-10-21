@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sang Hyeok's Homepage</title>
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        nav {
+            width: 200px;
+            background-color: #f4f4f4;
+            padding: 15px;
+            height: 100vh;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin-bottom: 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        nav ul li a:hover {
+            color: #007BFF;
+        }
+        main {
+            padding: 20px;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="loadContent('home')">Home</a></li>
+            <li><a href="#" onclick="loadContent('Research Interests')">About</a></li>
+            <li><a href="#" onclick="loadContent('Recent Works')">Services</a></li>
+            <li><a href="#" onclick="loadContent('Contact')">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <main id="main-content">
+        <h1>Welcome to the Homepage of Sang Hyeok Im (임상혁)</h1>
+        <p>Hi! I am Sang Hyeok Im, a graduate student studying astronomy in Seoul National University.</p>
+    </main>
+
+    <script>
+        function loadContent(section) {
+            var content = document.getElementById('main-content');
+            
+            if (section === 'home') {
+                content.innerHTML = `
+                    <h1>Welcome to the Home Page</h1>
+                    <p>This is the home section of the website.</p>
+                `;
+            } else if (section === 'Research Interests') {
+                content.innerHTML = `
+                    <h1>Research Interests</h1>
+                    <p>Large-scale structures of the Universe</p>
+                `;
+            } else if (section === 'Recent Works') {
+                content.innerHTML = `
+                    <h1>Recent Works</h1>
+                    <p>HR5 and ODIN...</p>
+                `;
+            } else if (section === 'Contact') {
+                content.innerHTML = `
+                    <h1>Contact</h1>
+                    <p>Feel free email me!</p>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>
