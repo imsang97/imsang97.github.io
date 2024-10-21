@@ -1,14 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Sang Hyeok's Homepage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sang Hyeok's Homepage</title>
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        nav {
+            width: 200px;
+            background-color: #f4f4f4;
+            padding: 15px;
+            height: 100vh; /* Make the menu fill the viewport height */
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin-bottom: 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            color: #007BFF;
+        }
+        main {
+            padding: 20px;
+            flex-grow: 1;
+        }
+    </style>
 </head>
-
 <body>
-  <h1>Welcome to the Hompage of Sang Hyeok Im (임상혁)</h1>
-  <p> Hi! I am Sang Hyeok Im, a PhD student studying astronomy in Seoul National University.</p>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Me</a></li>
+            <li><a href="#">Research Interests</a></li>
+            <li><a href="#">Recent Works</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <h1>Welcome to the Homepage of Sang Hyeok Im (임상혁)</h1>
+        <p>Hi! I am Sang Hyeok Im, a graduate student studying astronomy in Seoul National University.</p>
+        <p>Use the menu to navigate through different pages (links are just placeholders for now).</p>
+    </main>
 </body>
 </html>
