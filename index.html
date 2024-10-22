@@ -15,6 +15,7 @@
             background-color: #f4f4f4;
             padding: 15px;
             height: 100vh;
+            flex-shrink: 0;
         }
         nav img {
             width: 100%;
@@ -57,15 +58,22 @@
         <ul>
             <li><a href="#" onclick="loadContent('Home')">Home</a></li>
             <li><a href="#" onclick="loadContent('Research Interests')">Research Interests</a></li>
-            <li><a href="#" onclick="loadContent('Recent Works')">Recent Works</a></li>
+            <li><a href="#" onclick="loadContent('Recent Works')">Publications</a></li>
             <li><a href="#" onclick="loadContent('Contact')">Contact</a></li>
         </ul>
+        <p id="last-modified" style="margin-top: 20px; font-size: 12px; color: #555;"></p>
     </nav>
     
     <main id="main-content">
         <h1>Welcome to the Homepage of Sang Hyeok Im (임상혁)</h1>
         <p>Hi! I am Sang Hyeok Im, a Ph.D. student in the Department of Physics and Astronomy at Seoul National University (SNU). I am studying Extragalactic Astronomy and Cosmology during my Ph.D. program.</p>
         <p>Currently, I am a member of the SNU Extragalactic Astronomy & Cosmology Team (<a href="https://exgalcos.github.io/" target="_blank">ExgalCos</a>; led by Prof. Ho Seong Hwang).</p>
+
+        <h3>Education</h3>
+        <ul class="research-interests">
+            <li>Ph.D. student in the Department of Physics and Astronomy, Seoul National University, Seoul, Korea <br> (2021 - present)</li>
+            <li>B.S. in Astronomy and Atmospheric Sciences, Kyungpook National University, Daegu, Korea <br> (2015 - 2021; double major)</li>
+            <li>B.S. in Physics, Kyungpook National University, Daegu, Korea <br> (2015 - 2021; double major)</li>
     </main>
 
     <script>
@@ -89,7 +97,7 @@
                 `;
             } else if (section === 'Recent Works') {
                 content.innerHTML = `
-                    <h1>Recent Works</h1>
+                    <h1>Publications</h1>
 
                     <p>Curriculum Vita (<a href="ImSang_CV.pdf" download>pdf</a>)</p>
                     <p>ORCID : <a href="https://orcid.org/0009-0003-9748-4194" target="_blank">0009-0003-9748-4194</a></p>
@@ -105,7 +113,7 @@
                         <ul class="research-interests">
                             <li>ODIN: Identifying Protoclusters and Cosmic Filaments Traced by Lyα-emitting Galaxies <br> Vandana Ramakrishnan et al., 2024, submitted to ApJ (arXiv:2406.08645)</li>
                             <li>The One-hundred-deg2 DECam Imaging in Narrowbands (ODIN): Survey Design and Science Goals <br> Kyoung-Soo Lee et al., 2024, ApJ, 962, 36 </li>
-                            <li>ODIN: Improved Narrowband LyαEmitter Selection Techniques for z = 2.4, 3.1, and 4.5 <br> Nicole M. Firestone et al., 2023, submitted to ApJ (arXiv:2312.16075)</li>
+                            <li>ODIN: Improved Narrowband Lyα Emitter Selection Techniques for z = 2.4, 3.1, and 4.5 <br> Nicole M. Firestone et al., 2023, submitted to ApJ (arXiv:2312.16075)</li>
                             <li>ODIN: Where Do Lyα Blobs Live? Contextualizing Blob Environments within the Large-Scale Structure <br> Vandana Ramakrishnan et al., 2023, ApJ, 951, 119</li>
                         </ul>
                         
@@ -117,11 +125,15 @@
                     <h1>Contact</h1>
                     <p>Please feel free to contact me with any questions, comments, or suggestions!</p>
                     <ul>
-                            <li>Email: tkdgur0117@gmail.com</li>
+                            <li>email: tkdgur0117(at)gmail.com</li>
                     </ul>
                 `;
             }
         }
+        const lastModified = new Date(document.lastModified)
+        const formattedDate = lastModified.toLocaleDateString();
+        
+        document.getElementById('last-modified').innerHTML = 'Last modified: ' + formattedDate;
     </script>
 </body>
 </html>
