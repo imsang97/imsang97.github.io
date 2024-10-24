@@ -74,6 +74,11 @@
             <li>Ph.D. student in the Department of Physics and Astronomy, Seoul National University, Seoul, Korea <br> (2021 - present)</li>
             <li>B.S. in Astronomy and Atmospheric Sciences, Kyungpook National University, Daegu, Korea <br> (2015 - 2021; double major)</li>
             <li>B.S. in Physics, Kyungpook National University, Daegu, Korea <br> (2015 - 2021; double major)</li>
+        
+        </ul>
+        
+        <h3>Some Links</h3>
+        <p> My GitHub Page: <a href="https://github.com/imsang97">here</a></p>
     </main>
 
     <script>
@@ -124,16 +129,26 @@
                 content.innerHTML = `
                     <h1>Contact</h1>
                     <p>Please feel free to contact me with any questions, comments, or suggestions!</p>
-                    <ul>
-                            <li>email: tkdgur0117(at)gmail.com</li>
+                    <ul class="research-interests">
+                            <li>email : tkdgur0117(at)gmail.com</li>
+                            <li>office : Room 214, Building 19, Seoul National University, 1 Gwanak-ro, Gwanak-gu, Seoul 08826, Republic of Korea
+
+</li>
                     </ul>
                 `;
             }
         }
+
+
         const lastModified = new Date(document.lastModified)
         const formattedDate = lastModified.toLocaleDateString();
         
         document.getElementById('last-modified').innerHTML = 'Last modified: ' + formattedDate;
+        
     </script>
+
+    
 </body>
+
+
 </html>
